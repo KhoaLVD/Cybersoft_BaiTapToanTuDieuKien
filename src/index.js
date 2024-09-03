@@ -82,7 +82,7 @@ const kiemTraThuong = () =>{
     let result = document.getElementById("ketQuaThuong");
     result = "";
 
-    if(txtSanPham >=100){
+    if(txtSanPham >100){
         result+=`<div class="p-4 mb-4 text-base font-medium text-blue-800 rounded-lg bg-blue-50 text-center" role="alert">
                 Nhân viên được thưởng ${txtDoanhThu *10 /100} triệu đồng</div>`;
         ketQuaThuong.innerHTML = result;
@@ -138,23 +138,23 @@ const kiemTraDiem = () =>{
                 Học sinh giỏi</div>`;
         ketQuaDiem.innerHTML = result;
     } else if(txtstudentScore >=65 && txtstudentScore<80){
-        result+=`<div class="p-4 mb-4 text-base font-medium text-blue-800 rounded-lg bg-blue-50 text-center" role="alert">
+        result+=`<div class="p-4 mb-4 text-base font-medium text-red-800 rounded-lg bg-red-50 text-center" role="alert">
                 Học sinh khá</div>`;
         ketQuaDiem.innerHTML = result;
     } else if(txtstudentScore >=50 && txtstudentScore<65){
-        result+=`<div class="p-4 mb-4 text-base font-medium text-blue-800 rounded-lg bg-blue-50 text-center" role="alert">
+        result+=`<div class="p-4 mb-4 text-base font-medium text-green-800 rounded-lg bg-green-50 text-center" role="alert">
                 Học sinh trung bình</div>`;
         ketQuaDiem.innerHTML = result;
     } else if(txtstudentScore >=25 && txtstudentScore<50){
-        result+=`<div class="p-4 mb-4 text-base font-medium text-blue-800 rounded-lg bg-blue-50 text-center" role="alert">
+        result+=`<div class="p-4 mb-4 text-base font-medium text-yellow-800 rounded-lg bg-yellow-50 text-center" role="alert">
                 Học sinh yếu</div>`;
         ketQuaDiem.innerHTML = result;
     } else if(txtstudentScore >=0 && txtstudentScore<25){
-        result+=`<div class="p-4 mb-4 text-base font-medium text-blue-800 rounded-lg bg-blue-50 text-center" role="alert">
+        result+=`<div class="p-4 mb-4 text-base font-medium text-gray-800 rounded-lg bg-gray-50 text-center" role="alert">
                 Học sinh kém</div>`;
         ketQuaDiem.innerHTML = result;
     }else{
-        result+=`<div class="p-4 mb-4 text-base font-medium text-blue-800 rounded-lg bg-blue-50 text-center" role="alert">
+        result+=`<div class="p-4 mb-4 text-base font-medium text-gray-800 rounded-lg bg-gray-50 text-center" role="alert">
                 Số điểm không hợp lệ</div>`;
         ketQuaDiem.innerHTML = result;
     }
