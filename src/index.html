@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Bài tập toán tử điều kiện - KhoaLVD</title>
+  </head>
+  <body>
+    <section class="max-w-screen-xl mx-auto p-4">
+      <h2>Kiểm tra số dương</h2>
+      <h3>Vui lòng nhập số:</h3>
+      <input
+        type="number"
+        id="soCanKiemTra"
+        class="border-gray-300 rounded-lg"
+      />
+      <button
+        onclick="kiemTraSoDuong()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ml-4"
+      >
+        Kiểm tra
+      </button>
+      <div id="ketQuaSoDuong"></div>
+    </section>
+    <section class="max-w-screen-xl mx-auto p-4 mt-16">
+      <h2>Kiểm tra tuổi học sinh</h2>
+      <h3>Vui lòng nhập số tuổi:</h3>
+      <input
+        type="number"
+        id="soTuoiCanKiemTra"
+        class="border-gray-300 rounded-lg"
+      />
+      <button
+        onclick="kiemTraSoTuoi()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ml-4"
+      >
+        Kiểm tra
+      </button>
+      <div id="ketQuaSoTuoi"></div>
+    </section>
+    <section class="max-w-screen-xl mx-auto p-4 mt-16">
+      <h2>Kiểm tra số chẵn hay lẻ</h2>
+      <h3>Vui lòng nhập số:</h3>
+      <input
+        type="number"
+        id="soChanHayLe"
+        class="border-gray-300 rounded-lg"
+      />
+      <button
+        onclick="kiemTraSoChanHayLe()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ml-4"
+      >
+        Kiểm tra
+      </button>
+      <div id="ketQuaChanHayLe"></div>
+    </section>
+    <section class="max-w-screen-xl mx-auto p-4 mt-16">
+      <h2>Kiểm tra độ tuổi lái xe</h2>
+      <h3>Vui lòng nhập số tuổi:</h3>
+      <input
+        type="number"
+        id="soTuoiLaiXe"
+        class="border-gray-300 rounded-lg"
+      />
+      <button
+        onclick="kiemTraDoTuoiLaiXe()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ml-4"
+      >
+        Kiểm tra
+      </button>
+      <div id="ketQuaLaiXe"></div>
+    </section>
+    <section class="max-w-screen-xl mx-auto p-4 mt-16">
+      <h2>Xét thưởng nhân viên</h2>
+      <h3>Vui lòng nhập doanh thu (triệu đồng):</h3>
+      <input type="number" id="doanhThu" class="border-gray-300 rounded-lg" />
+      <h3>Vui lòng nhập số sản phẩm nhân viên bán được:</h3>
+      <input
+        type="number"
+        id="sanPham"
+        class="border-gray-300 rounded-lg"
+      /><br />
+      <button
+        onclick="kiemTraThuong()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 mt-4"
+      >
+        Kiểm tra
+      </button>
+      <div id="ketQuaThuong"></div>
+    </section>
+    <section class="max-w-screen-xl mx-auto p-4 mt-16">
+      <h2>Tính chiết khấu</h2>
+      <h3>Vui lòng nhập số tiền mua hàng (đô):</h3>
+      <input
+        type="number"
+        id="muaHang"
+        class="border-gray-300 rounded-lg mr-4"
+      />
+      <button
+        onclick="kiemTraChietKhau()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+      >
+        Kiểm tra
+      </button>
+      <div id="ketQuaChietKhau"></div>
+    </section>
+    <section class="max-w-screen-xl mx-auto p-4 mt-16">
+      <h2>Kiểm tra mật khẩu</h2>
+      <h3>Vui lòng nhập mật khẩu:</h3>
+      <input
+        type="password"
+        id="checkPass"
+        class="border-gray-300 rounded-lg"
+      />
+      <button
+        onclick="kiemTraMatKhau()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ml-4"
+      >
+        Kiểm tra
+      </button>
+      <div id="ketQuaMatKhau"></div>
+    </section>
+    <section class="max-w-screen-xl mx-auto p-4 mt-16">
+      <h2>Kiểm tra khoảng điểm</h2>
+      <h3>Vui lòng nhập điểm:</h3>
+      <input
+        type="number"
+        id="studentScore"
+        class="border-gray-300 rounded-lg"
+      />
+      <button
+        onclick="kiemTraDiem()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ml-4"
+      >
+        Kiểm tra
+      </button>
+      <div id="ketQuaDiem"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
